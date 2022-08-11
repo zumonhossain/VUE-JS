@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifiers</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <h1>{{ name }}</h1>   
+
+        <button @click.alt="Messege">Click Me</button>
+        <button @click.shift="Messege">Click Me</button>
+        <a href="https://www.youtube.com/" @click.prevent>Youtube</a>
+    </div>
+
+    <script>
+        var abc = new Vue({
+            el:'#app',
+            data:{
+                name: 'hello'
+            },
+            methods:{
+                Messege(){
+                    console.log('learn hunter')
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>
