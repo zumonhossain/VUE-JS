@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-for</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <p >Looping</p>
+
+        <ol>
+            <li v-for="name in names"> {{ name }} </li>
+        </ol>
+
+        <ul>
+            <li v-for="(fruit, index) in fruits">
+               {{index}} = > {{ fruit.name }} || {{ fruit.color }} || {{ fruit.weight }}
+            </li>
+        </ul>
+        
+     </div>
+
+
+    <script>
+        var abc = new Vue({
+            el:'#app',
+            data:{
+                names: ['masud' ,'sohel','karim','hamid','jamil','shiplu','moinali'],
+                fruits:[
+                    {name:'Mango' , color:'yellow' , weight:12},
+                    {name:'Orange' , color:'orange' , weight:80},
+                    {name:'Banana' , color:'yellow' , weight:20},
+                    {name:'Guava' , color:'green' , weight:70},
+                    {name:'papaya' , color:'Green' , weight:1000}
+                ]
+            },
+            
+            
+        })
+    </script>
+
+</body>
+</html>
